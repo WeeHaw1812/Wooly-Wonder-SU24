@@ -1,7 +1,6 @@
 import { useState } from "react";
 import toolData from "../../data/dungcu";
-import toolBanner1 from "../../assets/tool_banner1.png";
-import toolBanner2 from "../../assets/tool_banner2.png";
+import toolBanner from "../../assets/tool_banner.png";
 import Items from "../Items/Items";
 
 const Tools = () => {
@@ -36,8 +35,7 @@ const Tools = () => {
   return (
     <div className="p-[20px]">
       <div className="w-full flex items-center mb-[20px] border-y-[1px]">
-        <img src={toolBanner2} className="w-full h-[300px] object-fill" alt="" />
-        <img src={toolBanner1} className="w-full h-[300px] object-cover" alt="" />
+        <img src={toolBanner} className="w-full h-[300px] object-fill" alt="" />
       </div>
       <div className="flex w-full">
         <div className="w-1/4 flex flex-col gap-[10px]">
