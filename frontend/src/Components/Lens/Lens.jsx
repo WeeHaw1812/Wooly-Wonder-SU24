@@ -35,7 +35,7 @@ const Lens = () => {
   };
   return (
     <div className="p-[20px] flex flex-col gap-[15px]">
-      <img className="w-full h-[300px] object-fill" src={lens_banner} alt="" />
+      <img className="w-full h-[350px] object-fill" src={lens_banner} alt="" />
       <div className="flex w-full">
         <div className="w-1/4 flex flex-col gap-[10px]">
           <div className="color w-full flex flex-col gap-[10px]">
