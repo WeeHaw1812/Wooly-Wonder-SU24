@@ -1,8 +1,11 @@
-const Items = ({ data }) => {
-  console.log(data);
+import { Link } from "react-router-dom";
+
+const Items = ({ data, path }) => {
   return (
     <div className="flex flex-col gap-[10px] cursor-pointer">
-      <img className="h-[200px] object-fill" alt="" src={data.image} />
+      <Link to={`/${path}/${data.id}`}>
+        <img className="w-full h-[200px] object-fill" alt="" src={data.image} />
+      </Link>
       <div className="text-[#000000] w-48 overflow-hidden overflow-ellipsis whitespace-nowrap">
         {data.name}
       </div>

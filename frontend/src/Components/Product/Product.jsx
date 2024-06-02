@@ -208,9 +208,9 @@ const Product = () => {
             </div>
           </div>
         </div>
-        <div className="w-3/4 grid grid-cols-4 gap-[20px]">
+        <div className="w-3/4 grid grid-cols-4 gap-[20px] justify-center">
           {lenProducts.map((item) => (
-            <Items key={item.id} data={item} />
+            <Items key={item.id} data={item} path={"product"} />
           ))}
         </div>
       </div>

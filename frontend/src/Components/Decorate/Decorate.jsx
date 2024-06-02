@@ -219,7 +219,7 @@ const Decorate = () => {
         </div>
         <div className="w-3/4 grid grid-cols-4 gap-[20px]">
           {decorateData.map((item) => (
-            <ItemLens key={item.id} data={item} />
+            <ItemLens key={item.id} data={item} path={"decorate"} />
           ))}
         </div>
       </div>

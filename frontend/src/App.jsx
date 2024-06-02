@@ -8,6 +8,8 @@ import Decorate from "./Components/Decorate/Decorate";
 import Product from "./Components/Product/Product";
 import Cart from "./Pages/Cart";
 import Login from "./Pages/Login";
+import ViewDetailDisplay from "./Components/ViewDetailDisplay/ViewDetailDisplay";
+import ViewDetail from "./Components/ViewDetail/ViewDetail";
 
 const App = () => {
   return (
@@ -17,9 +19,13 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/lens" element={<Lens />}></Route>
+          <Route path="/lens/:lensId" element={<ViewDetail path={"lens"} />}></Route>
           <Route path="/tools" element={<Tools />}></Route>
+          <Route path="/tools/:toolsId" element={<ViewDetail path={"tools"} />}></Route>
           <Route path="/decorate" element={<Decorate />}></Route>
+          <Route path="/decorate/:decorateId" element={<ViewDetail path={"decorate"} />}></Route>
           <Route path="/product" element={<Product />}></Route>
+          <Route path="/product/:productId" element={<ViewDetail path={"product"} />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/login" element={<Login />}></Route>
         </Routes>

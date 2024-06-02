@@ -194,7 +194,7 @@ const Tools = () => {
         </div>
         <div className="w-3/4 grid grid-cols-4 gap-[20px]">
           {toolData.map((item) => (
-            <Items key={item.id} data={item} />
+            <Items key={item.id} data={item} path={"tools"} />
           ))}
         </div>
       </div>

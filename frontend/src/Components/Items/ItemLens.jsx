@@ -1,29 +1,29 @@
 import "./ItemLens.css";
 const colorClassMap = {
-  white: "bg-white",
-  black: "bg-black",
-  red: "bg-red-500",
-  tomato: "bg-red-400",
-  orange: "bg-orange-400",
-  yellow: "bg-yellow-500",
-  lightYellow: "bg-yellow-200",
-  boldYellow: "bg-yellow-600",
-  green: "bg-green-400",
-  blue: "bg-blue-500",
-  pink: "bg-fuchsia-300",
-  purple: "bg-purple-500",
-  deepPurple: "bg-purple-400",
-  brown: "bg-amber-800",
-  gray: "bg-slate-200",
+  White: "bg-white",
+  Black: "bg-black",
+  Red: "bg-red-500",
+  Tomato: "bg-red-400",
+  Orange: "bg-orange-400",
+  Yellow: "bg-yellow-500",
+  LightYellow: "bg-yellow-200",
+  BoldYellow: "bg-yellow-600",
+  Green: "bg-green-400",
+  Blue: "bg-blue-500",
+  Pink: "bg-fuchsia-300",
+  Purple: "bg-purple-500",
+  DeepPurple: "bg-purple-400",
+  Brown: "bg-amber-800",
+  Gray: "bg-slate-200",
 
   // Thêm các màu khác nếu cần
 };
 import { Link } from "react-router-dom";
-const ItemLens = ({ data }) => {
+const ItemLens = ({ data, path }) => {
   return (
     <div className="item relative">
-      <Link to={`/product/${data.id}`}>
-        <img className="h-[229px] object-contain" alt="" src={data.colorOptions[0].image} />
+      <Link to={`/${path}/${data.id}`}>
+        <img className="w-full h-[229px] object-fill" alt="" src={data.colorOptions[0].image} />
         <div className="absolute flex gap-[10px] items-center top-[200px] left-[5px]">
           {data.colorOptions.map((colorItem, index) => (
             <div
